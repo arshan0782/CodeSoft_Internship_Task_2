@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:#ccc;
+    color: #ededed;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 160px;
+    cursor: pointer;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: #ff0095;
+    font-family: bold Arial, Helvetica, sans-serif;
+}
+
+
+span{
+    color: orangered;
+}
+
+
+.navbar a {
+    font-size: 20px;
+    color: #ededed;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a:hover,.navbar a.active {
+    color: #00abf0;
+}
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    background: none;
+    max-width: 600px;
+
+}
+.home-content h1 {
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: black;
+} 
+
+
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 30px;
+    color: black;
+}
+.home-content .button-box{
+    display: flex;
+    align-items: center;
+}
+
+ .button {
+    display:inline-block;
+    padding: 10px 30px;
+    background: #00abf0;
+    border-radius: 40px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px black;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .5s;    
+}
+.button:hover{
+    background: transparent;
+    color: #161b1d;
+    box-shadow: none;
+
+}
+
+.Contact-section{
+    position: absolute;
+    width: 240px;
+    display:inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    margin-left: 120px;
+
+}
+ 
+.Contact-section a  {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.Contact-section a:hover {
+    color: #006aff;
+}
+
+
+.Contact-section a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: orange;
+    z-index: -1;
+    transition: .5s;
+
+}
+
+.Contact-section a:hover::before {
+    width: 100%;
+}
+
+
+ 
+.img{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #00abf0;
+    border-radius: 50%;
+    overflow: hidden;
+
+}
+.img::before{
+    content: "";
+    position: absolute;
+    inset:-10px 140px;
+    background: linear-gradient(315deg,#dfb10bea,#d400d4);
+    transition: 0.5s;
+    animation: cirulr 4s linear infinite;
+}
+.img:hover::before{
+    inset: -20px 0px;
+}
+
+@keyframes cirulr {
+   0% {
+      transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+      }
+
+}
+
+.img::after{
+    content: "";
+    position: absolute;
+    inset:6px;
+    background:black;
+    border-radius: 50%;
+    z-index: 1;
+}
+.homeimage {
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #070a1c;
+    z-index: 3;
+    border-radius:50% ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.homeimage img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 3;
+
+
+} 
